@@ -2,6 +2,8 @@
 
 Hold a hotkey, talk, let go. VerbVox types what you said into whatever app is in front.
 
+![VerbVox settings, Home tab](screenshot.png)
+
 VerbVox is a menu-bar dictation app for macOS. It records your microphone while you hold a global hotkey, transcribes the audio, cleans up the text, and pastes it into the frontmost app. Speech-to-text runs on your own Mac with a bundled build of [whisper.cpp](https://github.com/ggml-org/whisper.cpp), so it works right after install: no server to set up, no account, no API key. AI cleanup and text-to-speech are optional.
 
 ## What it does
