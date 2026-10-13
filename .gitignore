@@ -1,0 +1,53 @@
+# .gitignore
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Swift / Xcode build output
+.build/
+app/.build/
+# whisper.cpp checkout + built speech engine (app/scripts/whisper-engine.sh)
+app/.cache/
+dist/
+DerivedData/
+
+# Python
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+logs/
+
+# Secrets — NEVER commit.
+# The app stores API keys inside the SQLite DB; the proxy token lives in secret.env.
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+secret.env
+*.env
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+
+# Local, machine-specific signing identity (see app/build.sh)
+codesign.local.sh
+
+# Local tooling
+.codegraph/
+
+# Legacy Python v1 engine and its data folder (replaced by the Swift engine)
+backend/
+
+# Backups
+*.bak

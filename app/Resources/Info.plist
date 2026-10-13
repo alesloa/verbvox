@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleName</key>
+    <string>VerbVox</string>
+    <key>CFBundleDisplayName</key>
+    <string>VerbVox</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.verbvox.VerbVox</string>
+    <key>CFBundleExecutable</key>
+    <string>VerbVox</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleIconFile</key>
+    <string>AppIcon</string>
+    <key>CFBundleIconName</key>
+    <string>AppIcon</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>LSMinimumSystemVersion</key>
+    <string>14.0</string>
+    <key>LSUIElement</key>
+    <true/>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>VerbVox records from your microphone while you hold the dictation hotkey, then transcribes what you said.</string>
+    <key>NSSpeechRecognitionUsageDescription</key>
+    <string>VerbVox uses Apple's on-device speech recognition to turn your dictation into text. The audio stays on this Mac.</string>
+    <key>NSLocalNetworkUsageDescription</key>
+    <string>VerbVox sends recorded audio to a whisper transcription server on your local network to convert your speech to text.</string>
+    <key>NSHumanReadableCopyright</key>
+    <string>VerbVox</string>
+    <!-- Allow cleartext http:// to the LAN whisper server (private IPs, .local,
+         loopback) while keeping ATS enforced for the public internet. Without
+         this, URLSession blocks http://192.168.x.x and remote mode reads as
+         "unreachable" even though the server is up. -->
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsLocalNetworking</key>
+        <true/>
+    </dict>
+</dict>
+</plist>
